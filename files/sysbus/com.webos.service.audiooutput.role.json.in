@@ -1,0 +1,13 @@
+{
+    "exeName":"@WEBOS_INSTALL_SBINDIR@/audiooutputd",
+    "type": "regular",
+    "allowedNames": ["com.webos.service.audiooutput"],
+    "permissions": [
+        {
+            "service":"com.webos.service.audiooutput",
+            "outbound":[
+                "com.webos.service.audio"
+            ]
+        }
+    ]
+}
