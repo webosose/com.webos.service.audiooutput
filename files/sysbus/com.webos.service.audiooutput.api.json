@@ -1,10 +1,10 @@
 {
-  "media": [
+  "audiooutput.management": [
     "com.webos.service.audiooutput/audio/connect",
     "com.webos.service.audiooutput/audio/disconnect",
     "com.webos.service.audiooutput/audio/getStatus",
-    "com.webos.service.audiooutput/audio/mute",
     "com.webos.service.audiooutput/audio/setSoundOut",
+    "com.webos.service.audiooutput/audio/mute",
     "com.webos.service.audiooutput/audio/volume/down",
     "com.webos.service.audiooutput/audio/volume/getStatus",
     "com.webos.service.audiooutput/audio/volume/muteSoundOut",

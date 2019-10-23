@@ -1,12 +1,12 @@
 {
     "exeName":"@WEBOS_INSTALL_SBINDIR@/audiooutputd",
     "type": "regular",
+    "trustLevel" : "oem",
     "allowedNames": ["com.webos.service.audiooutput"],
     "permissions": [
         {
             "service":"com.webos.service.audiooutput",
             "outbound":[
-                "com.webos.service.audio"
             ]
         }
     ]
