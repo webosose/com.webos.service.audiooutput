@@ -1,4 +1,4 @@
-// Copyright (c) 2018 LG Electronics, Inc.
+// Copyright (c) 2018-2020 LG Electronics, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,20 +19,19 @@
 
 bool IVolumeController::setVolume(SpeakerVolume newVolume)
 {
-    if (newVolume > MAX_VOLUME || newVolume < MIN_VOLUME)
+    if (newVolume <= MAX_VOLUME && newVolume >= MIN_VOLUME)
     {
+        SpeakerVolume oldVolume = mVolume;
+        mVolume = newVolume;
+        bool success = onVolumeChanged();
+        if (!success)
+        {
+            mVolume = oldVolume;
+        }
+        return success;
+    }
+    else
         return false;
-    }
-
-    SpeakerVolume oldVolume = mVolume;
-    mVolume = newVolume;
-    bool success = onVolumeChanged();
-
-    if (!success)
-    {
-        mVolume = oldVolume;
-    }
-    return success;
 };
 
 bool IVolumeController::setMute(bool muteFlag)
