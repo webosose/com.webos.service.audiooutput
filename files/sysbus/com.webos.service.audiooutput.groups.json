@@ -1,4 +1,4 @@
 {
  "allowedNames": ["com.webos.service.audiooutput"],
- "audiooutput.management": "oem"
+ "audiooutput.management": ["oem"]
 }
